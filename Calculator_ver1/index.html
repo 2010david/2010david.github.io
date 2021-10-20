@@ -4,7 +4,9 @@
         <link href="style.css" rel="stylesheet" media="all">
         <title>Calculator</title>
         <script type="text/javascript">
-            function calculate(x, y, sign){
+            function calculate(x_, y_, sign){
+                var x=parseFloat(x_)
+                var y=parseFloat(y_)
                 if (sign == "+"){
                     return x+y
                 }
