@@ -1,0 +1,13 @@
+html, body{
+    background-color: #00ffff;
+    font-family: "Caviar dreams";
+    text-align: center;
+    font-size: 20px;
+}
+#itext, #otext{
+    color: #0000ff;
+    font-size: 40px;
+}
+#cal_input, #cal_result{
+    color: #7f7fff;
+}

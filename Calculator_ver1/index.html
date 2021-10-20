@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="style.css" rel="stylesheet" media="all">
+        <title>Calculator</title>
+        <script type="text/javascript">
+            function calculate(x, y, sign){
+                if (sign == "+"){
+                    return x+y
+                }
+                if (sign == "-"){
+                    return x-y
+                }
+                if (sign == "*"){
+                    return x*y
+                }
+                if (sign == "/"){
+                    return x/y
+                }
+            }
+            function getvalue(){
+                var value = location.search.split("&")
+                value[0] = value[0].replace("?", "")
+                value[0] = unescape(value[0].split("=")[1])
+                value[1] = unescape(value[1].split("=")[1])
+                value[2] = unescape(value[2].split("=")[1])
+                return value
+            }
+        </script>
+    </head>
+    <body>
+        <div id="itext">Input</div>
+        <div id="cal_input"></div>
+        <div id="otext">Output</div>
+        <div id="cal_result"></div>
+        <script>
+            var result = getvalue()
+            document.getElementById("cal_input").innerText = result[0]+" "+result[2]+" "+result[1]
+            document.getElementById("cal_result").innerText = calculate(result[0], result[1], result[2])
+        </script>
+    </body>
+</html>
